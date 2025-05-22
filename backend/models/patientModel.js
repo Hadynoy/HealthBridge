@@ -1,0 +1,17 @@
+import mongoose from "mongoose";
+
+const patientSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  image: { type: String, default:"data:image/webp;base64,UklGRhYHAABXRUJQVlA4TAoHAAAvx8AxEN+mqG0bKIjH/93uRjBtE6cgbQMWtjtm07Yhc6jSM4BY8B7IxIBmS9sTIB2AmGKZLGaIUyWFmHnjrITsRsGtGGetfvER0GF//z9DkqTKcjXHtm3btm3ba9se7nls21aPq+uq8s9ZdURGfJ/77SK+oYj+T0CI4V6iUuNuwybPW7rSWCXQNa6U8ELgVqkG/ed9uOPY1QdPX6ZLhVPmwdVjqOf1byA9QKmCttM/P/Ig45chKm2dKPBgFK074avzaUnQWTWhroBPrOXSPc8kcbtnKcZgI5qvPpmRVKIWNgoXr+b8oxlJLRrtFFBSg7e/9KlWwqRAUnv9TZ96tx7hEen6S6kMoFDWASM5/pQfUDvegaJo0W0/sLioCBAVNzzxA1yyoSIYKr3+3A+0UJWAUP61F37A8TULgoI1z/zAWywAQHz2I8lAO1tzzxt+TTIRteJd2wOSkUZwrvI3kpnWcC0y/zk7hHY863xWMlQhx4q/kEx1il+jH7JFK25V2yEZi9V4NekZa+wkTlXdKZmrBZ9GlbCnZBSXCr/2GawdjzpfYZFFDoWX/JdF2oT5U2mnZLJW/Ol2k02uG3/mZdiEijt5X0lGK+RN3UOsEpY3Pe6wSnfnzaRXrDKWM+E1OVY5NHxJfiaZrR1fym1jl9N8qb6HXVbzpcEJdqHiS/ML7BKWL22usMs6vrS7xi5sx5e2V9kl2vKl5UV2XUS+NDzNLqf5UvMAu4zjS4Vf2eUEX/K+ZZdAvkQ3s8sKvuCsUlYJjZwd8JBVWvCmyWlWuSa8Kf6JVULxJrwqxya3yvAGBz1kkx6E3K2zl01C8yf2OpsU8gcHPmCRwhCHq+xkkbY88man2eOs4hE2OswetCEuR5ZlWIPC8QmbHmGNVshpt+AVW4x1vMI6f2fL32qH+D3qHkvcKOR4wTtZdhhleYZN/8MO1RT5PuwGKwyGOJ9Y/IwNVhneYfn3MixAZ0P8r/19LnhOYQiCTbcGzyiEYasdLlgOVQiKLX/OBslgyxAcG36dDo7TDRGS1bc8DopwGmFZOON8MKxwCM1or61p+pyxAgFaa8Ul2tSKWgjTeI9vH9FkhdII1vKjzRNalBltEbJe1XE/3qPBWVFVIXBVhYHvnnhBBk+YgUKFIJxoOvnz4yXZsjElx61QCQSzl2o4dMX3B288Lc39kRPmxkG1YqhOeQjscEGdjsNnrnrr029/MALfcjN1xzo2HIK6MrFkXr5GFzMqBGAVNWVGpREKCEo3G795eDw4eriVJl9xT6XMlK/OvPCvziwMipsp5IszaopJeTwLVx/x4emX/m8fvVYnGFpa/7fKfTiiuuFVvMXCfzyWf1y6tWeMvpjZKuQfP9YLW8R5lOq06WSp/+cvLK7h0aXMYiH/fKne1CnFm2SXdy5l/b/8cuuQApqsM0r+5eyld3SSJ7F2r13O+WV69+PuKVpkd2f9Ms2Z19rFeOHVW3o665d17uoHvYsUOSXFB1edX9bmtK2nuFA07l9pn2Tu1ncT6sfIxKT67pbzSabFuCL2Rdp9/NAn/uzAG8MbpLyyUbKBfsNYn/hD1y7CuOKpx3KSypLDn8/t17hiMuL9kXJJKcxce7jEpzJ3bGoxy7xmH5X49Gb0qV2frps9ftiAPiiGSWs+3XVKZ3x6Sz5qppgVH7I769Oey7x8+uihtkahk7Rndw+JM6r8wmuSsygsk+q9/1Ry1wjHHq/tTxnJYRRtFWPCvXZLThsbZkpkyAnJ7eMuwpDo6HM+x7USzBBjL0muKysY4UZfkpxXox0TzLALkvsCDQO8vqckAK3ygtdhnwQhmsA13C6BKHTAKn2ahYJBFajk8hcSjLjcBcgbc0cCUo9RwWl/WIISdWAqfyuBKUxAogueQ0PYaDB6nJfgtCoQ5gcJUFM5AOFZzyBitaGv1VEJUqOoS72ehYlRKdp6X/eBqgVlxV/6YP1S0TX0HlzcUKrKf+8DVlmahtyHzH1HUeFXPmiVo6fXTdg4S03iTQlca2hpfgo6tjkl3pw0dNwcRUelbRK8WyvSIe7ARwsqImtz8HE6QkP1f0oAW01D33sQcoqC8PIshAyGyZX/RYJYWXLtLsLoIpKb+AJGaIhFX/OB/JogVWEHlFCQanEOSlqQGvwYSsKQmpuBEs4lFHvbBzPGyBT9BCdRRKbmfjgpR6bVJTipVmR63YfTfUtm5DM4WUdmehpObjqZxVk4GUUkvE4C2oRJRF+HlBIk4h9ACjWJxCeQ+sSQSH4GKe3+77//LX0OKUvEfAKpTwyJyEZIoSOBk1/CSQkk2vocnLQhk3oPTi5FBjuegdIZh4Qj0x/ASE2LkML8hXchZIVG8nkTDmagg07lhWgMN1v279sv0qVAdXhbLjPhEKXROgNmLV8FVNSiTjRUpg==" },
+  address: { type: Object, default: {line1:'', line2:' '} },
+  gender: { type: String, default: "Not Selected"}, 
+  dob: { type: String, default: "Not Selected"}, 
+  phone : { type: String, default: "00000000"}, 
+
+})
+
+const patientModel = mongoose.models.doctor || mongoose.model('patient', patientSchema)
+
+export default patientModel  
