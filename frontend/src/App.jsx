@@ -24,7 +24,7 @@ import AdminLogin from './pages/AdminLogin';
 // Signup Pages
 import DoctorSignup from './pages/signup/DoctorSignup';
 import AdminSignup from './pages/signup/AdminSignup';
-import PatientSignup from './pages/signup/patientSignUp';
+import PatientSignup from './pages/signup/PatientSignup';
 import BookAppointmentPage from './pages/BookAppointmentPage';
 
 // Dashboards
