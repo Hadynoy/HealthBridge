@@ -1,4 +1,4 @@
-import General_physician from '../assets/images/general_physician.svg';
+import General_physician from '../assets/images/General_physician.svg';
 import Gynecologist from '../assets/images/gynecologist.svg';
 import Dermatologist from '../assets/images/dermatologist.svg';
 import Pediatricians from '../assets/images/pediatricians.svg';
