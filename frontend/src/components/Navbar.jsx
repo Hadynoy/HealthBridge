@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import ProfilePic from '../assets/adi.jpg';
+import ProfilePic from '../assets/adi.webp';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 

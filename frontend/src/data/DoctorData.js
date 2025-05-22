@@ -1,25 +1,25 @@
 // src/data/doctorsData.js
-import doc1 from '../assets/images/doc1.png';
-import doc2 from '../assets/images/doc2.png';
-import doc3 from '../assets/images/doc3.png';
-import doc4 from '../assets/images/doc4.png';
-import doc5 from '../assets/images/doc5.png';
-import doc6 from '../assets/images/doc6.png';
-import doc7 from '../assets/images/doc7.png';
-import doc8 from '../assets/images/doc8.png';
-import doc9 from '../assets/images/doc9.png';
-import doc10 from '../assets/images/doc10.png';
-import doc11 from '../assets/images/doc11.png';
-import doc12 from '../assets/images/doc12.png';
-import doc13 from '../assets/images/doc13.png';
-import doc14 from '../assets/images/doc14.png';
-import doc15 from '../assets/images/doc15.png';
-import Gastroenterologist from '../assets/images/Gastroenterologist.svg';
-import Neurologist from '../assets/images/Neurologist.svg';
-import Pediatricians from '../assets/images/Pediatricians.svg';
-import Dermatologist from '../assets/images/Dermatologist.svg';
-import Gynecologist from '../assets/images/Gynecologist.svg';
-import General_physician from '../assets/images/General_physician.svg';
+import doc2 from '../assets/images/doc2.webp';
+import doc1 from '../assets/images/doc1.webp';
+import doc3 from '../assets/images/doc3.webp';
+import doc4 from '../assets/images/doc4.webp';
+import doc5 from '../assets/images/doc5.webp';
+import doc6 from '../assets/images/doc6.webp';
+import doc7 from '../assets/images/doc7.webp';
+import doc8 from '../assets/images/doc8.webp';
+import doc9 from '../assets/images/doc9.webp';
+import doc10 from '../assets/images/doc10.webp';
+import doc11 from '../assets/images/doc11.webp';
+import doc12 from '../assets/images/doc12.webp';
+import doc13 from '../assets/images/doc13.webp';
+import doc14 from '../assets/images/doc14.webp';
+import doc15 from '../assets/images/doc15.webp';
+import Gastroenterologist from '../assets/images/Gastroenterologist.webp';
+import Neurologist from '../assets/images/Neurologist.webp';
+import Pediatricians from '../assets/images/Pediatricians.webp';
+import Dermatologist from '../assets/images/Dermatologist.webp';
+import Gynecologist from '../assets/images/Gynecologist.webp';
+import General_physician from '../assets/images/General_physician.webp';
 
 
 export const doctors = [

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import group_profiles from '../assets/group_profiles.png';
-import header_img from '../assets/header_img.png';
+import group_profiles from '../assets/group_profiles.webp';
+import header_img from '../assets/header_img.webp';
 
 const Header = () => {
   return (

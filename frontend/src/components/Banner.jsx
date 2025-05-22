@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import appointment_img from '../assets/appointment_img.png';
+import appointment_img from '../assets/appointment_img.webp';
 
 const Banner = () => {
   const navigate = useNavigate();
