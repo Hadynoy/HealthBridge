@@ -1,9 +1,9 @@
 import General_physician from '../assets/images/General_physician.svg';
-import Gynecologist from '../assets/images/gynecologist.svg';
-import Dermatologist from '../assets/images/dermatologist.svg';
-import Pediatricians from '../assets/images/pediatricians.svg';
-import Neurologist from '../assets/images/neurologist.svg';
-import Gastroenterologist from '../assets/images/gastroenterologist.svg';
+import Gynecologist from '../assets/images/Gynecologist.svg';
+import Dermatologist from '../assets/images/Dermatologist.svg';
+import Pediatricians from '../assets/images/Pediatricians.svg';
+import Neurologist from '../assets/images/Neurologist.svg';
+import Gastroenterologist from '../assets/images/Gastroenterologist.svg';
 
 export const specialityData = [
   {
