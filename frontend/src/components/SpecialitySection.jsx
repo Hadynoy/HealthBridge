@@ -1,13 +1,17 @@
 // src/components/SpecialitySection.jsx
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { specialityData } from '../data/specialityData';
 
-// Swiper imports
-import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper CSS globally or here if preferred
 import 'swiper/css';
 import 'swiper/css/free-mode';
+
+// Lazy load Swiper components
+const Swiper = React.lazy(() => import('swiper/react').then(module => ({ default: module.Swiper })));
+const SwiperSlide = React.lazy(() => import('swiper/react').then(module => ({ default: module.SwiperSlide })));
+
 import { FreeMode } from 'swiper/modules';
 
 const SpecialitySection = () => {
@@ -37,32 +41,34 @@ const SpecialitySection = () => {
 
       {/* Speciality Carousel for small screens */}
       <div className="w-full pt-5 block sm:hidden">
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={16}
-          freeMode={true}
-          modules={[FreeMode]}
-        >
-          {specialityData.map((item, index) => (
-            <SwiperSlide key={index}>
-              <motion.div
-                className="flex flex-col items-center text-xs cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.3 + index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Link
-                  to={`/doctors/${item.speciality.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="text-center"
+        <Suspense fallback={<div>Loading carousel...</div>}>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={16}
+            freeMode={true}
+            modules={[FreeMode]}
+          >
+            {specialityData.map((item, index) => (
+              <SwiperSlide key={index}>
+                <motion.div
+                  className="flex flex-col items-center text-xs cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.3 + index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  <img src={item.image} alt={item.speciality} className="w-16 mb-2" />
-                  <p className="text-sm font-medium">{item.speciality}</p>
-                </Link>
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                  <Link
+                    to={`/doctors/${item.speciality.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="text-center"
+                  >
+                    <img src={item.image} alt={item.speciality} className="w-16 mb-2" />
+                    <p className="text-sm font-medium">{item.speciality}</p>
+                  </Link>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Suspense>
       </div>
 
       {/* Grid display for larger screens */}

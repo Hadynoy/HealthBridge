@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import ProfilePic from '../../assets/adi.jpg';
+import ProfilePic from '../../assets/adi.webp';
 
 const userLoginData = {
   name: "Onubaiye Adinoy",
