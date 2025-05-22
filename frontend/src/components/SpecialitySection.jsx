@@ -80,7 +80,7 @@ const SpecialitySection = () => {
               to={`/doctors/${item.speciality.toLowerCase().replace(/\s+/g, '-')}`}
               className="text-center"
             >
-              <img src={item.image} alt={item.speciality} className="w-24 mb-2" />
+              <img src={item.image} alt={item.speciality} className="w-24 mb-2" loading="lazy" />
               <p className="text-sm font-medium">{item.speciality}</p>
             </Link>
           </motion.div>

@@ -14,7 +14,7 @@ const AppointmentPage = () => {
     <div className='appointment-page'>
       <h1>Schedule an Appointment with Dr. {doctor.name}</h1>
       <p>Speciality: {doctor.speciality}</p>
-      <img src={doctor.image} alt={doctor.name} />
+      <img src={doctor.image} alt={doctor.name} loading="lazy" />
       <div className='appointment-form'>
         <button>Schedule Appointment</button>
       </div>

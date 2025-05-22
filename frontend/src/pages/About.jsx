@@ -30,6 +30,7 @@ const About = () => {
         <motion.img
           className="w-full md:max-w-[360px]"
           src={about_image}
+          loading="lazy"
           alt="Doctors interacting with a patient at HealthBridge Hospital"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}

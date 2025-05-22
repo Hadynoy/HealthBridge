@@ -87,6 +87,7 @@ const Doctor = () => {
                 className="w-full h-48 object-cover bg-blue-50"
                 src={doctor.image}
                 alt={doctor.name}
+                loading="lazy"
               />
               <div className="p-4">
                 <div className="flex items-center gap-2 text-sm text-center text-green-500 mb-2">

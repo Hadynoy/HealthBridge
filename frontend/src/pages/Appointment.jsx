@@ -74,6 +74,7 @@ const Appointment = () => {
           className='w-48 h-48 object-cover rounded-full border-4 border-gray-200'
           src={doctor.image}
           alt={doctor.name}
+          loading="lazy"
         />
         <div className='text-center md:text-left'>
           <p className='text-lg font-medium text-gray-900'>{doctor.name}</p>
@@ -158,6 +159,7 @@ const Appointment = () => {
                   className='w-full h-48 object-cover bg-blue-50'
                   src={item.image}
                   alt={item.name}
+                  loading="lazy"
                 />
                 <div className='p-4'>
                   <p className='text-lg font-medium text-gray-900'>{item.name}</p>

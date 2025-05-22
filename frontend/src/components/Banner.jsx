@@ -59,7 +59,7 @@ const Banner = () => {
         animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
       >
-        <img className="w-full absolute bottom-0 right-0 max-w-md" src={appointment_img} alt="Appointment" />
+        <img className="w-full absolute bottom-0 right-0 max-w-md" src={appointment_img} alt="Appointment" loading="lazy" />
       </motion.div>
     </motion.div>
   );

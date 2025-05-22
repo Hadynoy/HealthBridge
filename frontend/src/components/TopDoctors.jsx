@@ -66,7 +66,7 @@ const TopDoctors = () => {
               viewport={{ once: true, amount: 0.2 }}
               custom={i}
             >
-              <img className="bg-blue-50 w-full" src={item.image} alt={item.name} />
+              <img className="bg-blue-50 w-full" src={item.image} alt={item.name} loading="lazy" />
               <div className="p-4">
                 <div className="flex items-center gap-2 text-sm text-center text-green-500">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>

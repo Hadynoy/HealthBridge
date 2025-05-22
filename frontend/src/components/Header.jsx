@@ -39,7 +39,7 @@ const Header = () => {
         </motion.h1>
 
         <div className="flex flex-col md:flex-row items-center gap-4 text-white text-sm font-light">
-          <img className="w-24 md:w-28" src={group_profiles} alt="Group of Doctors" />
+          <img className="w-24 md:w-28" src={group_profiles} alt="Group of Doctors" loading="lazy" />
           <p>
             Simply browse through our extensive list of doctors <br className="hidden sm:block" />
             and book an appointment hassle-free.
